@@ -14,6 +14,7 @@ struct Movie: Codable {
     let vote_average: Double
     let overview: String
     let poster_path: String
+    let country: String
 }
 
 struct Genre: Codable {
