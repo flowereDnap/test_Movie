@@ -35,7 +35,7 @@ class MovieListView: UITableViewController{
         setupRefreshControl()
         setupTableView()
         
-        fetchMovies(page: 0)
+        fetchMovies(page: 1)
         
         
         // Do any additional setup after loading the view.
