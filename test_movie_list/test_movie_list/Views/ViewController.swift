@@ -11,7 +11,10 @@ class MovieListView: UITableViewController{
     
     @IBOutlet var table: UITableView!
     
-    private let movies = ["yes yes", "dub dub"]
+    private var movies: [Movie] = []
+    private var currentPage = 1
+    private var isLoading = false
+    
     
     private let noDataLabel: UILabel = {
             let label = UILabel()
@@ -32,6 +35,7 @@ class MovieListView: UITableViewController{
         setupRefreshControl()
         setupTableView()
         
+        fetchMovies(page: 0)
         
         
         // Do any additional setup after loading the view.
@@ -58,6 +62,25 @@ class MovieListView: UITableViewController{
            
            noDataLabel.isHidden = true // Initially hide the label
     }
+    
+    func fetchMovies(page: Int) {
+            guard !isLoading else { return }
+            isLoading = true
+        
+            NetworkManager.shared.fetchRatedMovies(page: page) { [weak self] result in
+                guard let self = self else { return }
+                self.isLoading = false
+                switch result {
+                case .success(let rMovies):
+                    let movies = rMovies.results.map{ Movie(from: $0) }
+                    self.movies.append(contentsOf: movies)
+                    self.table.reloadData()
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    
     
     private func setupRefreshControl() {
             myRefreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
@@ -104,12 +127,13 @@ class MovieListView: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return movies.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let movie = movies[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
-        cell.configure(title: "Title", genre: "genre", rating: "5", imageName: "Image")
+        cell.configure(title: movie.title, genre: movie.genres[0].name, rating: String(movie.vote_average), imageName: "Image")
         return cell
     }
     
