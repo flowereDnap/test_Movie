@@ -6,8 +6,8 @@
 //
 
 import Foundation
-
 import Alamofire
+
 
 class MovieService {
     static let shared = MovieService()
@@ -32,3 +32,4 @@ class MovieService {
         }
     }
 }
+
