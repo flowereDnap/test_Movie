@@ -40,9 +40,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Popular Movies" id="RJq-ij-Ydc">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icon_sort" id="5o2-8C-IvL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icon_sort" id="5o2-8C-IvL">
+                            <connections>
+                                <action selector="sortButton:" destination="84x-IL-8Ri" id="ekm-0b-pTV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="Pxb-qb-oaV" id="KMg-Nm-uXV"/>
                         <outlet property="table" destination="aRs-2C-ovH" id="gs2-qx-Wyj"/>
                     </connections>
                 </tableViewController>
@@ -116,18 +121,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sa7-wb-vaV">
-                                <rect key="frame" x="16" y="462" width="361" height="34.333333333333314"/>
+                                <rect key="frame" x="16" y="462" width="361" height="46"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypg-ce-jo8">
-                                        <rect key="frame" x="0.0" y="0.0" width="35" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="46"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Z"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="film"/>
                                         <connections>
                                             <action selector="trailerButtonTapped:" destination="mdn-ga-gB8" eventType="touchUpInside" id="yLP-Rw-nsh"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJK-W3-P28">
-                                        <rect key="frame" x="307.66666666666669" y="6.9999999999999982" width="53.333333333333314" height="20.333333333333329"/>
+                                        <rect key="frame" x="307.66666666666669" y="12.999999999999998" width="53.333333333333314" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -171,6 +176,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="film" width="32" height="32"/>
         <image name="icon_sort" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

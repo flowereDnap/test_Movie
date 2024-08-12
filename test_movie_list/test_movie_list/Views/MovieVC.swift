@@ -37,6 +37,11 @@ class MovieVC: UIViewController {
         descriptionLabel?.text = movie?.overview
         ratingLabel?.text = String(movie?.vote_average ?? 0)
         
+        if movie?.video != nil {
+            trailerButton?.isHidden = false
+        } else {
+            trailerButton?.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
     

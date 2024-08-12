@@ -15,6 +15,7 @@ struct Movie: Codable {
     let overview: String
     let poster_path: String
     let country: String
+    var video: URL?
 }
 
 struct Genre: Codable {

@@ -22,6 +22,9 @@
 		04DB908C2C6219160089CF53 /* MovieResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB908B2C6219160089CF53 /* MovieResponce.swift */; };
 		04DB908E2C62193F0089CF53 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB908D2C62193F0089CF53 /* Loader.swift */; };
 		04E9BCC72C68B73F003911F7 /* MovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9BCC62C68B73F003911F7 /* MovieVC.swift */; };
+		04E9BCCB2C697C55003911F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E9BCC92C697C55003911F7 /* Localizable.strings */; };
+		04E9BCCE2C697CC4003911F7 /* Strings+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9BCCD2C697CC4003911F7 /* Strings+extension.swift */; };
+		04E9BCD12C697DED003911F7 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 04E9BCCF2C697DED003911F7 /* Localizable.stringsdict */; };
 		C1F1270CF2ADDAF204CB2744 /* Pods_test_movie_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3196581CFBB766734D046687 /* Pods_test_movie_list.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,12 @@
 		04DB908B2C6219160089CF53 /* MovieResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponce.swift; sourceTree = "<group>"; };
 		04DB908D2C62193F0089CF53 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		04E9BCC62C68B73F003911F7 /* MovieVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVC.swift; sourceTree = "<group>"; };
+		04E9BCC82C697C13003911F7 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		04E9BCCA2C697C55003911F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		04E9BCCC2C697C5D003911F7 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		04E9BCCD2C697CC4003911F7 /* Strings+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+extension.swift"; sourceTree = "<group>"; };
+		04E9BCD02C697DED003911F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		04E9BCD22C697DEF003911F7 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = uk; path = uk.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		3196581CFBB766734D046687 /* Pods_test_movie_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_movie_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D258C3B5A1BE6C32082BDA /* Pods-test_movie_list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_movie_list.debug.xcconfig"; path = "Target Support Files/Pods-test_movie_list/Pods-test_movie_list.debug.xcconfig"; sourceTree = "<group>"; };
 		A4DFC0DBFD988E262427F12A /* Pods-test_movie_list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_movie_list.release.xcconfig"; path = "Target Support Files/Pods-test_movie_list/Pods-test_movie_list.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +98,9 @@
 				04C97EF52C583962006D493C /* Assets.xcassets */,
 				04C97EF72C583962006D493C /* LaunchScreen.storyboard */,
 				04C97EFA2C583962006D493C /* Info.plist */,
+				04E9BCC92C697C55003911F7 /* Localizable.strings */,
+				04E9BCCD2C697CC4003911F7 /* Strings+extension.swift */,
+				04E9BCCF2C697DED003911F7 /* Localizable.stringsdict */,
 			);
 			path = test_movie_list;
 			sourceTree = "<group>";
@@ -186,6 +198,7 @@
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = 04C97EE02C58395F006D493C;
 			productRefGroup = 04C97EEA2C58395F006D493C /* Products */;
@@ -202,10 +215,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E9BCCB2C697C55003911F7 /* Localizable.strings in Resources */,
 				04C97EF62C583962006D493C /* Assets.xcassets in Resources */,
 				04C97EF92C583962006D493C /* Base in Resources */,
 				04C97F022C58E388006D493C /* MovieCell.xib in Resources */,
 				04C97EF42C58395F006D493C /* Base in Resources */,
+				04E9BCD12C697DED003911F7 /* Localizable.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +281,7 @@
 				04DB908E2C62193F0089CF53 /* Loader.swift in Sources */,
 				04C97EED2C58395F006D493C /* AppDelegate.swift in Sources */,
 				04C97F0C2C5A3CC3006D493C /* MovieListVM.swift in Sources */,
+				04E9BCCE2C697CC4003911F7 /* Strings+extension.swift in Sources */,
 				04C97F032C58E388006D493C /* MovieCell.swift in Sources */,
 				04C97EEF2C58395F006D493C /* SceneDelegate.swift in Sources */,
 				04DB908C2C6219160089CF53 /* MovieResponce.swift in Sources */,
@@ -279,6 +295,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				04C97EF32C58395F006D493C /* Base */,
+				04E9BCC82C697C13003911F7 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -291,6 +308,24 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		04E9BCC92C697C55003911F7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E9BCCA2C697C55003911F7 /* en */,
+				04E9BCCC2C697C5D003911F7 /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		04E9BCCF2C697DED003911F7 /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04E9BCD02C697DED003911F7 /* en */,
+				04E9BCD22C697DEF003911F7 /* uk */,
+			);
+			name = Localizable.stringsdict;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -299,6 +334,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -362,6 +398,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -421,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = test_movie_list/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -449,6 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = test_movie_list/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

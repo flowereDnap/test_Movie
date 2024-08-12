@@ -1,0 +1,33 @@
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "5o2-8C-IvL"; */
+"5o2-8C-IvL.title" = "Item";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "8hy-Ha-QHh"; */
+"8hy-Ha-QHh.text" = "Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Nka-1u-xsX"; */
+"Nka-1u-xsX.text" = "Label";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "Pxb-qb-oaV"; */
+"Pxb-qb-oaV.placeholder" = "Search";
+
+/* Class = "UINavigationItem"; title = "Popular Movies"; ObjectID = "RJq-ij-Ydc"; */
+"RJq-ij-Ydc.title" = "Popular Movies";
+
+/* Class = "UILabel"; text = "Country, Year"; ObjectID = "UT3-Sa-3mM"; */
+"UT3-Sa-3mM.text" = "Country, Year";
+
+/* Class = "UILabel"; text = "Rating:"; ObjectID = "iJK-W3-P28"; */
+"iJK-W3-P28.text" = "Rating:";
+
+/* Class = "UILabel"; text = "Genre"; ObjectID = "jWH-Xm-Xs5"; */
+"jWH-Xm-Xs5.text" = "Genre";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "obu-eC-AEO"; */
+"obu-eC-AEO.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "obu-eC-AEO"; */
+"obu-eC-AEO.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ypg-ce-jo8"; */
+"ypg-ce-jo8.normalTitle" = "Button";

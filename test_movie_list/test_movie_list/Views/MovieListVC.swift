@@ -7,11 +7,20 @@
 
 import UIKit
 
-class MovieListView: UITableViewController{
+class MovieListView: UITableViewController, UISearchBarDelegate{
     
     @IBOutlet var table: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
+    private let movies: [String] = [
+    "Game of Chips",
+    "Sea cips",
+    "Chipsters",
+    "Basic Chips",
+    "The Chipsfather",
+    "A Chips",
+    ]
     
-    private let movies = ["yes yes", "dub dub"]
+    private var filteredMovies: [String] = []
     
     private let noDataLabel: UILabel = {
             let label = UILabel()
@@ -32,7 +41,10 @@ class MovieListView: UITableViewController{
         setupRefreshControl()
         setupTableView()
         
-        
+        table.dataSource = self
+        table.delegate = self
+        searchBar.delegate = self
+        filteredMovies = movies
         
         // Do any additional setup after loading the view.
     }
@@ -79,7 +91,8 @@ class MovieListView: UITableViewController{
            noDataLabel.isHidden = !movies.isEmpty
     }
     
-    func presentActionSheet() {
+    @IBAction func sortButton(_ sender: Any) {
+       
             // Create the action sheet
             let actionSheet = UIAlertController(title: "Choose an option", message: nil, preferredStyle: .actionSheet)
             
@@ -101,20 +114,32 @@ class MovieListView: UITableViewController{
             
             // Present the action sheet
             present(actionSheet, animated: true, completion: nil)
+        
     }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return filteredMovies.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MovieCell.identifier, for: indexPath) as! MovieCell
-        cell.configure(title: "Title", genre: "genre", rating: "5", imageName: "Image")
+        cell.configure(title: "Title", genre: "genre".localized, rating: "5", imageName: "Image")
+        cell.textLabel?.text = filteredMovies[indexPath.row]
         return cell
     }
     
 
     
-
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            filteredMovies = movies
+        } else {
+            filteredMovies = movies.filter { $0.lowercased().contains(searchText.lowercased())}
+            }
+        table.reloadData()
+    }
 }
 
